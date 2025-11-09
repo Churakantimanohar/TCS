@@ -299,6 +299,9 @@ export default function TestModal({ onClose }) {
     try {
       saveAttempt("demoUser", summary);
     } catch {}
+    try {
+      localStorage.setItem("tcs-last-summary", JSON.stringify(summary));
+    } catch {}
     localStorage.removeItem(stateKey.current);
     cleanupBodyLocks();
     exitFullscreen();

@@ -1,0 +1,45 @@
+{
+  "title": "TCS NQT Exam",
+  "sequence": [
+    {
+      "key": "verbal",
+      "name": "Verbal Ability",
+      "part": "Part A - Foundation Section",
+      "count": 25,
+      "durationSec": 1500
+    },
+    {
+      "key": "reasoning",
+      "name": "Reasoning Ability",
+      "part": "Part A - Foundation Section",
+      "count": 20,
+      "durationSec": 1500
+    },
+    {
+      "key": "numerical",
+      "name": "Numerical Ability",
+      "part": "Part A - Foundation Section",
+      "count": 20,
+      "durationSec": 1500
+    },
+    {
+      "key": "advanced_qr",
+      "name": "Advanced Quantitative & Reasoning",
+      "part": "Part B - Advanced Section",
+      "count": 15,
+      "durationSec": 1500
+    },
+    {
+      "key": "advanced_coding",
+      "name": "Advanced Coding",
+      "part": "Part B - Advanced Section",
+      "count": 3,
+      "durationSec": 5400
+    }
+  ],
+  "settings": {
+    "pauseTimerOnFullscreenExit": true,
+    "allowedTabSwitches": 1,
+    "paletteCols": 5
+  }
+}

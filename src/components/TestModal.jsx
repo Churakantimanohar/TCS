@@ -31,9 +31,31 @@ export default function TestModal({ onClose }) {
   useEffect(() => {
     let mounted = true;
     const base = import.meta.env.BASE_URL || "/";
+    // Helper to optionally load a generated pool and merge it
+    const loadPools = async () => {
+      const core = await fetch(`${base}sample-data/questions.json`).then((r) =>
+        r.json()
+      );
+      try {
+        const gen = await fetch(
+          `${base}sample-data/questions.generated.json`
+        ).then((r) => (r.ok ? r.json() : null));
+        if (!gen) return core;
+        const out = { ...core };
+        for (const k of Object.keys(gen)) {
+          const a = Array.isArray(core[k]) ? core[k] : [];
+          const b = Array.isArray(gen[k]) ? gen[k] : [];
+          out[k] = [...a, ...b];
+        }
+        return out;
+      } catch {
+        return core;
+      }
+    };
+
     Promise.all([
       fetch(`${base}examConfig.json`).then((r) => r.json()),
-      fetch(`${base}sample-data/questions.json`).then((r) => r.json()),
+      loadPools(),
     ]).then(([cfg, pools]) => {
       if (!mounted) return;
       setConfig(cfg);
@@ -91,7 +113,23 @@ export default function TestModal({ onClose }) {
   function prepareSection(cfg, pools, idx) {
     const section = cfg.sequence[idx];
     const pool = pools[section.key] || [];
-    const sliced = shuffle(pool)
+    // Avoid recently used question IDs to increase variety across runs
+    const recentKey = `tcs-recent-${section.key}`;
+    const recent = (() => {
+      try {
+        const arr = JSON.parse(localStorage.getItem(recentKey) || "[]");
+        return Array.isArray(arr) ? new Set(arr) : new Set();
+      } catch {
+        return new Set();
+      }
+    })();
+    const withIds = pool.map((q, i) => ({
+      __id: q.id || `${(q.question || "").slice(0,50)}#${i}`,
+      ...q,
+    }));
+    let candidates = withIds.filter((q) => !recent.has(q.__id));
+    if (candidates.length < section.count) candidates = withIds; // fallback if pool too small
+    const sliced = shuffle(candidates)
       .slice(0, section.count)
       .map((q, i) => ({
         ...q,
@@ -101,6 +139,13 @@ export default function TestModal({ onClose }) {
           : ["Option A", "Option B"],
         question: q.question || `Question ${i + 1}`,
       }));
+    // Update recent ring buffer (cap 300 per category)
+    try {
+      const ring = Array.from(recent);
+      ring.unshift(...sliced.map((q) => q.__id));
+      const capped = ring.slice(0, 300);
+      localStorage.setItem(recentKey, JSON.stringify(capped));
+    } catch {}
     setQuestions(sliced);
     const map = {};
     for (let i = 0; i < sliced.length; i++) map[i] = "not-visited";

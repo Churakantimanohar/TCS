@@ -2,7 +2,7 @@
 // - Evaluates provided code and returns function by name
 // - Runs provided tests and returns results array
 
-function deepEqual(a, b) {
+export function deepEqual(a, b) {
   if (a === b) return true;
   if (typeof a !== typeof b) return false;
   if (a && b && typeof a === "object") {

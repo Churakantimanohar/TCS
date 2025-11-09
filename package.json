@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "ingest:pdf": "node scripts/ingest/pdf-ingest.mjs"
   },
   "dependencies": {
     "firebase": "^10.0.0",
@@ -20,6 +21,7 @@
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.4.7",
-    "vite": "^7.2.2"
+    "vite": "^7.2.2",
+    "pdf-parse": "^1.1.1"
   }
 }

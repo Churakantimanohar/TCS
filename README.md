@@ -9,7 +9,7 @@ Features
 - Centered fixed-size (1200x700) exam window with dimmed backdrop
 - Dual timers: per-section countdown + global elapsed time (HH:MM:SS)
 - Auto section advance when its timer expires; final auto-submit after last section
-- Randomized question selection per section (shuffles pools and slices count)
+- Randomized question selection per section (shuffles pools and slices count). Supports optional merged pools from `public/sample-data/questions.generated.json` if present (produced via PDF ingest script) to expand variety.
 - Question palette with states: Not Visited (gray), Current (blue outline), Answered (purple), Marked (orange), Answered+Marked (green)
 - Floating keyboard-enabled calculator (0–9 + - \* / . Enter evaluate, Backspace delete, Alt+C toggle)
 - Keyboard shortcuts: Alt+N Next, Alt+P Previous, Alt+M Mark, Alt+C Calculator
@@ -73,6 +73,27 @@ Troubleshooting (white page):
 - Confirm `dist/` has the JSON files (they are static so Vite copies them). If missing, ensure they reside in `public/` before building.
 - If using a custom domain (CNAME), the relative base still works; avoid leading slashes in asset fetches.
 
+Bulk Question Ingestion from PDF
+
+You can ingest many past paper PDFs into a generated question pool.
+
+1. Put your source PDFs inside `pdf-source/` (create at repo root).
+2. Run:
+
+```bash
+npm install
+npm run ingest:pdf -- --src ./pdf-source --out public/sample-data/questions.generated.json
+```
+
+3. Start the app. It will merge the generated pools with the base `questions.json` automatically (duplicate stems skipped).
+4. Manually open `questions.generated.json` to fill in `correct` indices (the script leaves them blank) and adjust any malformed stems/options.
+
+Heuristics:
+
+- Detects questions in the form `12) Question text` or `12. Question text`.
+- Options lines like `A)`, `B)`, etc.
+- Categorization guesses based on keywords; edit function `inferCategory` in `scripts/ingest/pdf-ingest.mjs` to refine.
+
 Configuration
 
 - `public/examConfig.json`: sections array with keys, counts, durations (seconds), plus settings: `pauseTimerOnFullscreenExit`, `allowedTabSwitches`, `paletteCols`.
@@ -97,6 +118,7 @@ Next Enhancements (suggested)
 
 - Aggregate full multi-section results (store each section summary in an array rather than overwriting).
 - Add scoring & correctness evaluation (currently `correct` field present in sample data for potential scoring).
+- Persistent rotation logic to avoid recent repeats: maintain a localStorage ring buffer of last X question IDs per category and exclude them on sampling.
 - Implement Authentication UI and attempt history retrieval.
 - Add per-section review navigation on results page.
 - GitHub Actions workflow for auto-deploy on push.

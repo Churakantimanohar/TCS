@@ -1,6 +1,10 @@
 import { defineConfig } from "vite";
 
-// Relative base ensures assets resolve correctly on GitHub Pages under a subpath.
+// Build for GitHub Pages at https://manoharreddy.me/TCS/
 export default defineConfig({
   base: "/TCS/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
 });

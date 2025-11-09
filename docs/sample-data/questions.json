@@ -1,0 +1,661 @@
+{
+  "verbal": [
+    {
+      "id": "v7",
+      "question": "Find the error: She don't like tea.",
+      "options": ["She", "don't", "like", "tea"],
+      "correct": 1
+    },
+    {
+      "id": "v8",
+      "question": "Select the synonym of 'benevolent'",
+      "options": ["kind", "cruel", "mean", "harsh"],
+      "correct": 0
+    },
+    {
+      "id": "v9",
+      "question": "Antonym of 'ascend'",
+      "options": ["rise", "climb", "descend", "mount"],
+      "correct": 2
+    },
+    {
+      "id": "v10",
+      "question": "Choose the correctly punctuated sentence.",
+      "options": [
+        "lets eat, Grandpa",
+        "Let's eat Grandpa",
+        "Let's eat, Grandpa",
+        "Lets, eat Grandpa"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "v11",
+      "question": "Identify the part of speech: Quickly",
+      "options": ["noun", "verb", "adverb", "adjective"],
+      "correct": 2
+    },
+    {
+      "id": "v12",
+      "question": "Idioms: 'Break the ice' means",
+      "options": [
+        "start a conversation",
+        "break something",
+        "get angry",
+        "win"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "v13",
+      "question": "One word: A person who knows many languages",
+      "options": ["linguist", "interpreter", "translator", "polyglot"],
+      "correct": 3
+    },
+    {
+      "id": "v14",
+      "question": "Choose the correct tense: He ____ here since 2010.",
+      "options": ["worked", "has worked", "had worked", "works"],
+      "correct": 1
+    },
+    {
+      "id": "v15",
+      "question": "Antonym of 'scarce'",
+      "options": ["rare", "plenty", "few", "deficient"],
+      "correct": 1
+    },
+    {
+      "id": "v16",
+      "question": "Synonym of 'diligent'",
+      "options": ["lazy", "careless", "hardworking", "idle"],
+      "correct": 2
+    },
+    {
+      "id": "v17",
+      "question": "Fill in: They ____ to school daily.",
+      "options": ["goes", "go", "gone", "going"],
+      "correct": 1
+    },
+    {
+      "id": "v18",
+      "question": "Change to indirect: He said, 'I am tired.'",
+      "options": [
+        "He said he is tired",
+        "He said that he was tired",
+        "He says he was tired",
+        "He told he is tired"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "v19",
+      "question": "Choose the correct preposition: He is good ___ math.",
+      "options": ["in", "on", "at", "with"],
+      "correct": 2
+    },
+    {
+      "id": "v20",
+      "question": "Antonym of 'vivid'",
+      "options": ["bright", "dull", "clear", "lively"],
+      "correct": 1
+    },
+    {
+      "id": "v21",
+      "question": "Synonym of 'fragile'",
+      "options": ["strong", "sturdy", "delicate", "firm"],
+      "correct": 2
+    },
+    {
+      "id": "v22",
+      "question": "Correct the sentence: He didn't wrote",
+      "options": [
+        "He don't wrote",
+        "He didn't write",
+        "He not wrote",
+        "He don't write"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "v23",
+      "question": "Choose the correct: Either of the boys ____ guilty.",
+      "options": ["are", "were", "is", "have"],
+      "correct": 2
+    },
+    {
+      "id": "v24",
+      "question": "One word: A person who looks on the bright side",
+      "options": ["pessimist", "optimist", "realist", "idealist"],
+      "correct": 1
+    },
+    {
+      "id": "v25",
+      "question": "Choose the correct conjunction: I waited ____ he arrived.",
+      "options": ["and", "so", "until", "but"],
+      "correct": 2
+    },
+    {
+      "id": "v26",
+      "question": "Synonym of 'augment'",
+      "options": ["increase", "decrease", "divide", "ignore"],
+      "correct": 0
+    },
+    {
+      "id": "v27",
+      "question": "Antonym of 'generous'",
+      "options": ["stingy", "kind", "helpful", "lavish"],
+      "correct": 0
+    },
+    {
+      "id": "v28",
+      "question": "Choose correct form: She has ____ the cake.",
+      "options": ["eat", "ate", "eaten", "eating"],
+      "correct": 2
+    },
+    {
+      "id": "v29",
+      "question": "Identify figure of speech: 'Time is a thief'",
+      "options": ["metaphor", "simile", "personification", "alliteration"],
+      "correct": 0
+    },
+    {
+      "id": "v30",
+      "question": "Fill blank: He insisted ____ paying.",
+      "options": ["in", "on", "at", "for"],
+      "correct": 1
+    }
+  ],
+  "reasoning": [
+    {
+      "id": "r1",
+      "question": "Find the next number: 2, 4, 8, 16, ?",
+      "options": ["20", "24", "30", "32"],
+      "correct": 3
+    },
+    {
+      "id": "r2",
+      "question": "If ALL = 30 and SUN = 54, then SKY = ? (A=1)",
+      "options": ["55", "60", "64", "58"],
+      "correct": 2
+    },
+    {
+      "id": "r3",
+      "question": "Odd one out",
+      "options": ["Square", "Rectangle", "Triangle", "Pentagon"],
+      "correct": 2
+    },
+    {
+      "id": "r4",
+      "question": "Which direction is opposite of northwest?",
+      "options": ["Southeast", "Southwest", "Northeast", "East"],
+      "correct": 0
+    },
+    {
+      "id": "r5",
+      "question": "Complete series: 1,1,2,3,5,?",
+      "options": ["8", "7", "9", "6"],
+      "correct": 0
+    },
+    {
+      "id": "r6",
+      "question": "Blood relation: A is mother of B. B is sister of C. A is?",
+      "options": ["Aunt", "Mother", "Grandmother", "Sister"],
+      "correct": 1
+    },
+    {
+      "id": "r7",
+      "question": "Venn: Which set shows animals, mammals, cats?",
+      "options": [
+        "Three separate",
+        "Cats⊂Mammals⊂Animals",
+        "Animals⊂Mammals⊂Cats",
+        "Mammals⊂Cats⊂Animals"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "r8",
+      "question": "Coding-decoding: If CAT=3120, DOG=?",
+      "options": ["4157", "4156", "4167", "4256"],
+      "correct": 2
+    },
+    {
+      "id": "r9",
+      "question": "Directions: If facing North then left turn: now facing?",
+      "options": ["East", "West", "South", "North"],
+      "correct": 1
+    },
+    {
+      "id": "r10",
+      "question": "Analogy: Bird:Fly :: Fish:?",
+      "options": ["Walk", "Swim", "Jump", "Crawl"],
+      "correct": 1
+    },
+    {
+      "id": "r11",
+      "question": "Syllogism: All A are B. Some B are C. Conclusion: Some A may be C?",
+      "options": ["Yes", "No", "Cannot say", "Both"],
+      "correct": 0
+    },
+    {
+      "id": "r12",
+      "question": "Paper folding: Count possible holes",
+      "options": ["1", "2", "3", "4"],
+      "correct": 3
+    },
+    {
+      "id": "r13",
+      "question": "Ranking: If A > B > C > D, who is second?",
+      "options": ["A", "B", "C", "D"],
+      "correct": 1
+    },
+    {
+      "id": "r14",
+      "question": "Seating: Who sits between A and C?",
+      "options": ["B", "D", "E", "F"],
+      "correct": 0
+    },
+    {
+      "id": "r15",
+      "question": "Mirror image of 'qp' is?",
+      "options": ["pq", "bd", "db", "qp"],
+      "correct": 2
+    },
+    {
+      "id": "r16",
+      "question": "Statement-Conclusion: All roses are red. Some flowers are roses. Conclusion: Some flowers are red.",
+      "options": ["True", "False", "Uncertain", "None"],
+      "correct": 0
+    },
+    {
+      "id": "r17",
+      "question": "Calendar: If 1 Jan 2024 is Monday, 1 Feb 2024?",
+      "options": ["Thursday", "Friday", "Wednesday", "Tuesday"],
+      "correct": 0
+    },
+    {
+      "id": "r18",
+      "question": "Clock: Angle between 3 and 30 minutes?",
+      "options": ["90°", "75°", "105°", "60°"],
+      "correct": 1
+    },
+    {
+      "id": "r19",
+      "question": "Cube counting: How many small cubes?",
+      "options": ["8", "27", "64", "125"],
+      "correct": 1
+    },
+    {
+      "id": "r20",
+      "question": "Data sufficiency sample",
+      "options": ["A only", "B only", "Both", "None"],
+      "correct": 2
+    },
+    {
+      "id": "r21",
+      "question": "Series: 3,9,27,81, ?",
+      "options": ["162", "243", "108", "324"],
+      "correct": 1
+    },
+    {
+      "id": "r22",
+      "question": "Analogy: Finger:Hand :: Leaf:?",
+      "options": ["Tree", "Branch", "Root", "Flower"],
+      "correct": 0
+    },
+    {
+      "id": "r23",
+      "question": "Direction: Start facing East, turn right, right, left. Now facing?",
+      "options": ["North", "South", "East", "West"],
+      "correct": 1
+    },
+    {
+      "id": "r24",
+      "question": "Pattern completion: A C E G ?",
+      "options": ["I", "H", "J", "K"],
+      "correct": 0
+    },
+    {
+      "id": "r25",
+      "question": "If 2x+3=11 then x=?",
+      "options": ["4", "5", "6", "3"],
+      "correct": 0
+    }
+  ],
+  "numerical": [
+    {
+      "id": "n1",
+      "question": "What is 12 * 15?",
+      "options": ["140", "160", "180", "190"],
+      "correct": 2
+    },
+    {
+      "id": "n2",
+      "question": "Simplify: 45/9 + 6",
+      "options": ["11", "5", "10", "9"],
+      "correct": 0
+    },
+    {
+      "id": "n3",
+      "question": "Percentage: 25% of 160",
+      "options": ["20", "30", "35", "40"],
+      "correct": 3
+    },
+    {
+      "id": "n4",
+      "question": "Solve: (3^2 + 4^2)^(1/2)",
+      "options": ["3", "4", "5", "6"],
+      "correct": 2
+    },
+    {
+      "id": "n5",
+      "question": "Ratio: Simplify 15:35",
+      "options": ["3:7", "7:3", "5:7", "7:5"],
+      "correct": 0
+    },
+    {
+      "id": "n6",
+      "question": "Simple Interest on 1000 at 10% for 2y",
+      "options": ["100", "150", "200", "250"],
+      "correct": 2
+    },
+    {
+      "id": "n7",
+      "question": "Compound Interest approx (no calc): 1000 at 10% 2y",
+      "options": ["200", "210", "220", "190"],
+      "correct": 1
+    },
+    {
+      "id": "n8",
+      "question": "HCF of 24 and 36",
+      "options": ["6", "12", "18", "24"],
+      "correct": 1
+    },
+    {
+      "id": "n9",
+      "question": "LCM of 4 and 6",
+      "options": ["10", "12", "18", "8"],
+      "correct": 1
+    },
+    {
+      "id": "n10",
+      "question": "Average of 2,4,6,8",
+      "options": ["4", "5", "6", "7"],
+      "correct": 1
+    },
+    {
+      "id": "n11",
+      "question": "Probability of head in fair coin",
+      "options": ["0.25", "0.5", "0.75", "1"],
+      "correct": 1
+    },
+    {
+      "id": "n12",
+      "question": "Permutation: 5P2",
+      "options": ["10", "20", "15", "30"],
+      "correct": 3
+    },
+    {
+      "id": "n13",
+      "question": "Combination: 5C2",
+      "options": ["10", "20", "15", "30"],
+      "correct": 0
+    },
+    {
+      "id": "n14",
+      "question": "Speed: 60km in 2h",
+      "options": ["20", "30", "40", "50"],
+      "correct": 1
+    },
+    {
+      "id": "n15",
+      "question": "Time and Work: A in 10d, B in 15d. Together?",
+      "options": ["6d", "7d", "8d", "9d"],
+      "correct": 0
+    },
+    {
+      "id": "n16",
+      "question": "Boats: Downstream 12, Upstream 8. Speed of stream?",
+      "options": ["1", "2", "3", "4"],
+      "correct": 1
+    },
+    {
+      "id": "n17",
+      "question": "Area of circle radius 7 (pi=22/7)",
+      "options": ["132", "154", "176", "121"],
+      "correct": 1
+    },
+    {
+      "id": "n18",
+      "question": "SI vs CI which is larger?",
+      "options": ["SI", "CI", "Equal", "Depends"],
+      "correct": 1
+    },
+    {
+      "id": "n19",
+      "question": "Unit conversion: 1km = ? m",
+      "options": ["100", "1000", "10", "10000"],
+      "correct": 1
+    },
+    {
+      "id": "n20",
+      "question": "Profit: CP=80, SP=100. Profit%?",
+      "options": ["10%", "20%", "25%", "30%"],
+      "correct": 2
+    },
+    {
+      "id": "n21",
+      "question": "Square root of 196",
+      "options": ["12", "13", "14", "15"],
+      "correct": 2
+    },
+    {
+      "id": "n22",
+      "question": "Convert 2.5 hours to minutes",
+      "options": ["120", "125", "150", "135"],
+      "correct": 2
+    },
+    {
+      "id": "n23",
+      "question": "Solve: 7 + (6 / 3)",
+      "options": ["9", "11", "13", "7"],
+      "correct": 0
+    },
+    {
+      "id": "n24",
+      "question": "Percentage increase from 50 to 65",
+      "options": ["15%", "25%", "30%", "35%"],
+      "correct": 2
+    },
+    {
+      "id": "n25",
+      "question": "Simplify: (2/5) + (3/10)",
+      "options": ["1/2", "7/10", "3/5", "9/10"],
+      "correct": 1
+    }
+  ],
+  "advanced_qr": [
+    {
+      "id": "aq1",
+      "question": "Integral of d/dx(x^3) * dx?",
+      "options": ["x^2", "x^3", "3x^2", "x^3 + C"],
+      "correct": 3
+    },
+    {
+      "id": "aq2",
+      "question": "If P(A)=0.5, P(B)=0.4, P(A∩B)=0.2 then P(A∪B)=?",
+      "options": ["0.9", "0.7", "0.6", "0.8"],
+      "correct": 1
+    },
+    {
+      "id": "aq3",
+      "question": "Matrix: det([[1,2],[3,4]])?",
+      "options": ["-2", "2", "-5", "5"],
+      "correct": 2
+    },
+    {
+      "id": "aq4",
+      "question": "Limit: lim x->0 sin x / x",
+      "options": ["0", "1", "∞", "-1"],
+      "correct": 1
+    },
+    {
+      "id": "aq5",
+      "question": "Derivative: d/dx (e^x)",
+      "options": ["e^x", "x e^x", "1", "x"],
+      "correct": 0
+    },
+    {
+      "id": "aq6",
+      "question": "Bayes theorem relates",
+      "options": ["conditional probs", "odds", "binomial", "uniform"],
+      "correct": 0
+    },
+    {
+      "id": "aq7",
+      "question": "Graph: slope of y=2x+1",
+      "options": ["1", "2", "3", "0"],
+      "correct": 1
+    },
+    {
+      "id": "aq8",
+      "question": "Series sum of AP: a=2, d=3, n=5",
+      "options": ["35", "40", "45", "50"],
+      "correct": 1
+    },
+    {
+      "id": "aq9",
+      "question": "Vector magnitude of (3,4)",
+      "options": ["3", "4", "5", "7"],
+      "correct": 2
+    },
+    {
+      "id": "aq10",
+      "question": "Combinatorics: ways to choose 2 from 6",
+      "options": ["12", "15", "30", "20"],
+      "correct": 1
+    },
+    {
+      "id": "aq11",
+      "question": "Number theory: gcd(84,36)",
+      "options": ["6", "8", "12", "18"],
+      "correct": 2
+    },
+    {
+      "id": "aq12",
+      "question": "Inequality: |x|>=0 is",
+      "options": ["true", "false", "sometimes", "never"],
+      "correct": 0
+    },
+    {
+      "id": "aq13",
+      "question": "Log: log10(100)",
+      "options": ["1", "2", "10", "0"],
+      "correct": 1
+    },
+    {
+      "id": "aq14",
+      "question": "Geometry: sum of triangle angles",
+      "options": ["90", "180", "270", "360"],
+      "correct": 1
+    },
+    {
+      "id": "aq15",
+      "question": "Probability of rolling a 6 on die",
+      "options": ["1/5", "1/6", "1/7", "1/4"],
+      "correct": 1
+    },
+    {
+      "id": "aq16",
+      "question": "Integral of 2x dx",
+      "options": ["x^2 + C", "2x^2 + C", "x^2/2 + C", "(2x)^2 + C"],
+      "correct": 0
+    },
+    {
+      "id": "aq17",
+      "question": "If vector a=(1,2) and b=(3,4), a·b=?",
+      "options": ["7", "11", "10", "8"],
+      "correct": 1
+    },
+    {
+      "id": "aq18",
+      "question": "Solve for x: ln(e^5)=?",
+      "options": ["x=5", "x=e^5", "5e", "1"],
+      "correct": 0
+    },
+    {
+      "id": "aq19",
+      "question": "Derivative of x^4",
+      "options": ["4x^3", "x^3", "4x^4", "x^4/4"],
+      "correct": 0
+    },
+    {
+      "id": "aq20",
+      "question": "Limit: lim x->∞ (3x^2 + x)/(x^2)",
+      "options": ["3", "0", "∞", "3+x"],
+      "correct": 0
+    }
+  ],
+  "advanced_coding": [
+    {
+      "id": "c1",
+      "type": "coding",
+      "title": "Merge Sort Implementation",
+      "prompt": "Implement mergeSort(arr) that returns a new sorted array using the merge sort algorithm.",
+      "functionName": "mergeSort",
+      "starterCode": "function mergeSort(arr){\n  if(!Array.isArray(arr)) return [];\n  if(arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length/2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = mergeSort(arr.slice(mid));\n  return merge(left, right);\n}\nfunction merge(a,b){\n  const out=[]; let i=0,j=0;\n  while(i<a.length && j<b.length){\n    if(a[i] <= b[j]) out.push(a[i++]); else out.push(b[j++]);\n  }\n  while(i<a.length) out.push(a[i++]);\n  while(j<b.length) out.push(b[j++]);\n  return out;\n}\n",
+      "tests": [
+        {
+          "args": [[3, 1, 2]],
+          "expected": [1, 2, 3],
+          "desc": "Sort small array"
+        },
+        {
+          "args": [[5, 4, 3, 2, 1]],
+          "expected": [1, 2, 3, 4, 5],
+          "desc": "Reverse order"
+        },
+        { "args": [[1]], "expected": [1], "desc": "Single element" },
+        { "args": [[]], "expected": [], "desc": "Empty array" },
+        { "args": [[2, 2, 1]], "expected": [1, 2, 2], "desc": "Duplicates" }
+      ]
+    },
+    {
+      "id": "c2",
+      "type": "coding",
+      "title": "Palindrome Check",
+      "prompt": "Implement isPalindrome(str) that returns true if str is a palindrome (case insensitive, alphanumeric only).",
+      "functionName": "isPalindrome",
+      "starterCode": "function isPalindrome(str){\n  if(typeof str !== 'string') return false;\n  const cleaned = str.replace(/[^a-zA-Z0-9]/g,'').toLowerCase();\n  let i=0,j=cleaned.length-1;\n  while(i<j){\n    if(cleaned[i++]!==cleaned[j--]) return false;\n  }\n  return true;\n}\n",
+      "tests": [
+        { "args": ["racecar"], "expected": true, "desc": "Simple palindrome" },
+        { "args": ["Race CAR"], "expected": true, "desc": "Case + spaces" },
+        { "args": ["hello"], "expected": false, "desc": "Non-palindrome" },
+        { "args": [""], "expected": true, "desc": "Empty string" },
+        {
+          "args": ["A man, a plan, a canal: Panama"],
+          "expected": true,
+          "desc": "Classic phrase"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "type": "coding",
+      "title": "Array Two Sum",
+      "prompt": "Implement twoSum(nums,target) returning indices of two numbers that add to target or [] if none.",
+      "functionName": "twoSum",
+      "starterCode": "function twoSum(nums, target){\n  const map = new Map();\n  for(let i=0;i<nums.length;i++){\n    const need = target - nums[i];\n    if(map.has(need)) return [map.get(need), i];\n    map.set(nums[i], i);\n  }\n  return [];\n}\n",
+      "tests": [
+        {
+          "args": [[2, 7, 11, 15], 9],
+          "expected": [0, 1],
+          "desc": "Basic example"
+        },
+        { "args": [[3, 2, 4], 6], "expected": [1, 2], "desc": "Middle pair" },
+        { "args": [[3, 3], 6], "expected": [0, 1], "desc": "Duplicate values" },
+        { "args": [[1, 2, 3], 7], "expected": [], "desc": "No solution" }
+      ]
+    }
+  ]
+}

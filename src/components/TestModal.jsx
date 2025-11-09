@@ -30,9 +30,10 @@ export default function TestModal({ onClose }) {
   // Initial load: config & pools
   useEffect(() => {
     let mounted = true;
+    const base = import.meta.env.BASE_URL || "/";
     Promise.all([
-      fetch("/examConfig.json").then((r) => r.json()),
-      fetch("/sample-data/questions.json").then((r) => r.json()),
+      fetch(`${base}examConfig.json`).then((r) => r.json()),
+      fetch(`${base}sample-data/questions.json`).then((r) => r.json()),
     ]).then(([cfg, pools]) => {
       if (!mounted) return;
       setConfig(cfg);

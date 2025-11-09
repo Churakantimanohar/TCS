@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 export default function InstructionsPage({ onStart }) {
   const [config, setConfig] = useState(null);
   useEffect(() => {
-    fetch("/examConfig.json")
+    const base = import.meta.env.BASE_URL || "/";
+    fetch(`${base}examConfig.json`)
       .then((r) => r.json())
       .then(setConfig)
       .catch(() => setConfig(null));

@@ -1,5 +1,3 @@
-
-
 # TCS iON NQT Practice — Mock
 
 This is a lightweight React + Tailwind mock that visually and behaviorally mimics the TCS iON test window. It runs entirely on the frontend; Firestore integration is optional.
@@ -49,11 +47,31 @@ Firebase (optional)
 
 Deploy to GitHub Pages
 
-- Configure `package.json` `homepage` (optional) and run:
+The app performs XHR fetches for `examConfig.json` and `sample-data/questions.json`. On GitHub Pages the site usually lives at `https://<user>.github.io/<repo>/`, so root-relative paths like `/examConfig.json` would 404. This project uses a relative base (`vite.config.js` sets `base: './'`) and fetches via `import.meta.env.BASE_URL` to avoid white screens.
+
+Steps:
+
+1. Ensure `vite.config.js` exists with:
+
+```js
+export default defineConfig({ base: "./" });
+```
+
+2. Build and deploy:
 
 ```bash
+npm run build
 npm run deploy
 ```
+
+3. Visit: `https://<user>.github.io/<repo>/` (not the bare domain unless using a user/organization root repo).
+
+Troubleshooting (white page):
+
+- Open DevTools → Network. If `examConfig.json` or `questions.json` show 404, confirm `base: './'` and that fetch uses `import.meta.env.BASE_URL`.
+- Clear browser cache or disable cache in DevTools.
+- Confirm `dist/` has the JSON files (they are static so Vite copies them). If missing, ensure they reside in `public/` before building.
+- If using a custom domain (CNAME), the relative base still works; avoid leading slashes in asset fetches.
 
 Configuration
 
@@ -64,6 +82,16 @@ Autosave & Resume
 
 - State persisted under key `tcs-nqt-exam-state-v2` every change and every 10s. Closing/reloading restores progress, timers (approx), section index, answers, statuses.
 - Global & section elapsed times reconstructed on resume (approximation; not crypto-precise, acceptable for practice use).
+
+Coding Section (Part B)
+
+Advanced Coding questions now use a live coding interface:
+
+- Each question object in `advanced_coding` section has: `type: "coding"`, `functionName`, `starterCode`, and `tests` (array of `{ args, expected, desc }`).
+- User code runs in-browser via `src/utils/codeRunner.js`; results panel shows pass/fail per test.
+- Marking logic treats a coding question as answered once tests are executed (can refine to require all tests pass).
+
+To add more coding tasks, append to `advanced_coding` array with the same shape. Keep function names unique.
 
 Next Enhancements (suggested)
 

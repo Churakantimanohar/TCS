@@ -124,7 +124,7 @@ export default function TestModal({ onClose }) {
       }
     })();
     const withIds = pool.map((q, i) => ({
-      __id: q.id || `${(q.question || "").slice(0,50)}#${i}`,
+      __id: q.id || `${(q.question || "").slice(0, 50)}#${i}`,
       ...q,
     }));
     let candidates = withIds.filter((q) => !recent.has(q.__id));
@@ -191,10 +191,10 @@ export default function TestModal({ onClose }) {
     return `${hh}:${mm}:${ss}`;
   }
 
-  function handleAnswer(qIndex, choice) {
+  function handleAnswer(qIndex, choice, meta) {
     setQuestions((prev) => {
       const copy = [...prev];
-      copy[qIndex] = { ...copy[qIndex], selected: choice };
+      copy[qIndex] = { ...copy[qIndex], selected: choice, ...(meta || {}) };
       return copy;
     });
     setStatuses((s) => ({
@@ -244,11 +244,38 @@ export default function TestModal({ onClose }) {
         answered: Object.values(statuses).filter(
           (v) => v === "answered" || v === "answered-review"
         ).length,
+        correct: questions.filter(
+          (q) => typeof q.correct === "number" && q.selected === q.correct
+        ).length,
+        wrong: questions.filter(
+          (q) =>
+            typeof q.correct === "number" &&
+            q.selected !== undefined &&
+            q.selected !== q.correct
+        ).length,
+        skipped: questions.filter((q) => q.selected === undefined).length,
         timeUsed: Math.floor((Date.now() - sectionStartTime.current) / 1000),
         questions,
       });
     }
-    return { sections: list, globalElapsed, totalTimeUsed: globalElapsed };
+    // Aggregate totals
+    const agg = list.reduce(
+      (a, s) => {
+        a.total += s.total;
+        a.answered += s.answered;
+        a.correct += s.correct || 0;
+        a.wrong += s.wrong || 0;
+        a.skipped += s.skipped || 0;
+        return a;
+      },
+      { total: 0, answered: 0, correct: 0, wrong: 0, skipped: 0 }
+    );
+    return {
+      sections: list,
+      globalElapsed,
+      totalTimeUsed: globalElapsed,
+      aggregate: agg,
+    };
   }
 
   function appendSectionSummary() {
@@ -423,7 +450,7 @@ export default function TestModal({ onClose }) {
           <MainContent
             question={questions[current]}
             qIndex={current}
-            onAnswer={(choice) => handleAnswer(current, choice)}
+            onAnswer={(choice, meta) => handleAnswer(current, choice, meta)}
             onPrev={() => goTo(Math.max(0, current - 1))}
             onNext={() => goTo(current + 1)}
             onMark={() => toggleMark(current)}

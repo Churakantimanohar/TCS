@@ -31,7 +31,9 @@ export default function MainContent({
           tests={q.tests || []}
           value={q.selected || q.starterCode}
           onChange={(code) => onAnswer(code)}
-          onAttempt={(code) => onAnswer(code)}
+          onAttempt={(code, summary) =>
+            onAnswer(code, { codeSummary: summary })
+          }
         />
       ) : (
         <ul className="space-y-2">

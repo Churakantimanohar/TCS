@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom quick palette colors to match iON-like look */
+.palette-not-visited {
+  @apply bg-gray-300 text-gray-800;
+}
+.palette-answered {
+  @apply bg-purple-600 text-white;
+}
+.palette-mark-review {
+  @apply bg-orange-400 text-white;
+}
+.palette-answered-review {
+  @apply bg-green-500 text-white;
+}
+.palette-current {
+  @apply ring-4 ring-[#0077C8] bg-white text-[#0077C8];
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  font-family: "Roboto", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  color: #333333;
+  @apply bg-gray-200;
+}
